@@ -1,9 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+
+import { AngularFireModule } from 'angularfire2';
+
+import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
+import { PagesModule } from './pages';
 
 @NgModule({
   declarations: [
@@ -11,10 +17,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     FormsModule,
-    HttpModule
+    ReactiveFormsModule,
+    HttpModule,
+    routing,
+    // 
+    PagesModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

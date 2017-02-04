@@ -1,0 +1,30 @@
+<div class="tile-form-back" [@backState]="_show" (click)="close()"></div>
+<div class="tile-form" [@formTile]="_show" (submit)="_save()">
+  <div class="col-sm-12">
+    <h4>Tile</h4>
+    <hr>
+
+    <form class="form">
+
+      <div class="form-group">
+        <alert-message></alert-message>
+      </div>
+
+      <div class="form-group">
+        <label class="col-form-label">Label</label>
+        <input type="text" class="form-control" [formControl]="label" [disableIf]="_waiting">
+      </div>
+
+      <div class="form-group">
+        <label class="col-form-label">Content*</label>
+        <textarea rows="10" class="form-control" [formControl]="content" [disableIf]="_waiting"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-success" [disabled]="_waiting">Save</button>
+        <button type="button" class="btn btn-danger" [disabled]="_waiting || !_key" (click)="_remove()">Remove</button>
+        <button type="button" class="btn btn-default" [disabled]="_waiting" (click)="close()">Close</button>
+      </div>
+    </form>
+  </div>
+</div>

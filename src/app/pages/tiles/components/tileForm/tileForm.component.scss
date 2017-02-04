@@ -1,0 +1,28 @@
+
+.tile-form-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #CCCCCC;
+  z-index: 1;
+}
+
+.tile-form {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  background: #1CA6A6;
+  padding-top: 15px;
+  z-index: 2;
+  overflow: auto;
+  @media screen and (max-width: 400px) {
+    right: -320px;
+    width: 320px;
+  }
+  @media screen and (min-width: 400px) {
+    right: -400px;
+    width: 400px;
+  }
+}

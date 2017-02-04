@@ -1,0 +1,96 @@
+
+/*
+ * Colors Definition
+ */
+
+// color schema: https://color.adobe.com/pt/Print-Colors-color-theme-9115628/
+$colorA: #1B6C8C;
+$colorB: #1CA6A6;
+$colorC: #ADBAB7;
+$colorD: #F2C879;
+$colorE: #BF491F;
+
+
+.auth-main {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $colorA;
+}
+
+.auth-block {
+  margin: 0 auto;
+  display: table;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: $colorB;
+  box-shadow: 3px 3px 0 $colorC;
+  @media screen and (max-width: 450px) {
+    width: 90%;
+  }
+  @media screen and (min-width: 450px) {
+    width: 400px;
+  }
+}
+
+.tile-nav {
+  background: $colorD;
+  border-radius: 0;
+  box-shadow: 0 3px 0 $colorC;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.tile-content {
+  background: $colorA;
+  position: relative;
+  display: table;
+  height: 100vh;
+  width: 100%;
+  padding-top: 55px;
+}
+
+.tile-list {
+  margin-top: 30px;
+}
+
+.tile-card {
+  background: $colorB;
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 $colorC;
+
+  h4 {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  p {
+    width: 100%;
+    display: inline-block;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+  span {
+    margin: 0 auto;
+    width: 15px;
+    height: 15px;
+    display: table;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
